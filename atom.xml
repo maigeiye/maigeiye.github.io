@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>麦给野</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2020-04-11T07:25:34.455Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>麦给野</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>My Blog</title>
+    <link href="http://yoursite.com/2020/01/11/MyBlog/"/>
+    <id>http://yoursite.com/2020/01/11/MyBlog/</id>
+    <published>2020-01-11T07:23:03.000Z</published>
+    <updated>2020-04-11T07:25:34.455Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Hallo-Wolrd&quot;&gt;&lt;a href=&quot;#Hallo-Wolrd&quot; class=&quot;headerlink&quot; title=&quot;Hallo Wolrd!&quot;&gt;&lt;/a&gt;Hallo
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
