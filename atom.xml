@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-11T07:25:34.455Z</updated>
+  <updated>2020-04-11T13:03:46.317Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SpringBoot自动配置原理</title>
+    <link href="http://yoursite.com/2020/02/11/SpringBoot%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86/"/>
+    <id>http://yoursite.com/2020/02/11/SpringBoot%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86/</id>
+    <published>2020-02-11T13:01:22.000Z</published>
+    <updated>2020-04-11T13:03:46.317Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;自动配置介绍&quot;&gt;&lt;a href=&quot;#自动配置介绍&quot; class=&quot;headerlink&quot; title=&quot;自动配置介绍&quot;&gt;&lt;/a&gt;自动配置介绍&lt;/h2&gt;&lt;p&gt;​       
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Spring Boot" scheme="http://yoursite.com/categories/Spring-Boot/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>My Blog</title>
