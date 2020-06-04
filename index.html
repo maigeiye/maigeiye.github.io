@@ -74,7 +74,7 @@
     
     
     
-    <article id="post-SpringBoot自动配置原理" class="article article-type-post" itemscope
+    <article id="post-SpringBoot-Automatic-Assembly" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -82,7 +82,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2020/02/11/SpringBoot%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86/"
+  <a class="article-title" href="/2020/02/11/SpringBoot-Automatic-Assembly/"
     >SpringBoot自动配置原理</a> 
 </h2>
  
@@ -92,7 +92,7 @@
 
     
     <div class="article-meta">
-      <a href="/2020/02/11/SpringBoot%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86/" class="article-date">
+      <a href="/2020/02/11/SpringBoot-Automatic-Assembly/" class="article-date">
   <time datetime="2020-02-11T13:01:22.000Z" itemprop="datePublished">2020-02-11</time>
 </a>
       
@@ -118,73 +118,8 @@
 <p>​        Spring Boot启动时自动导入组件是主程序中@SpringBootApplication注解实现的</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Target</span>(&#123;ElementType.TYPE&#125;)</span><br><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="meta">@Documented</span></span><br><span class="line"><span class="meta">@Inherited</span></span><br><span class="line"><span class="meta">@SpringBootConfiguration</span></span><br><span class="line"><span class="meta">@EnableAutoConfiguration</span></span><br><span class="line"><span class="meta">@ComponentScan</span>(excludeFilters = &#123;</span><br><span class="line">    <span class="meta">@Filter</span>(type = FilterType.CUSTOM, classes = &#123;TypeExcludeFilter<span class="class">.<span class="keyword">class</span>&#125;),</span></span><br><span class="line"><span class="class">    @<span class="title">Filter</span>(<span class="title">type</span> </span>= FilterType.CUSTOM, classes = &#123;AutoConfigurationExcludeFilter<span class="class">.<span class="keyword">class</span>&#125;) &#125;)</span></span><br><span class="line"><span class="class"><span class="title">public</span> @<span class="title">interface</span> <span class="title">SpringBootApplication</span> </span>&#123;</span><br></pre></td></tr></table></figure>
       
-      <a class="article-more-link" href="/2020/02/11/SpringBoot%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86/">阅读更多...</a>
+      <a class="article-more-link" href="/2020/02/11/SpringBoot-Automatic-Assembly/">阅读更多...</a>
       
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-
-    </footer>
-
-  </div>
-
-  
-
-  
-  
-  
-
-  
-  
-  
-
-</article>
-    
-    <article id="post-MyBlog" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/01/11/MyBlog/"
-    >My Blog</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/01/11/MyBlog/" class="article-date">
-  <time datetime="2020-01-11T07:23:03.000Z" itemprop="datePublished">2020-01-11</time>
-</a>
-      
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <h2 id="Hallo-Wolrd"><a href="#Hallo-Wolrd" class="headerlink" title="Hallo Wolrd!"></a>Hallo Wolrd!</h2>
       
       <!-- reward -->
       
@@ -251,8 +186,6 @@
       <li>
         <!-- cnzz统计 -->
         
-        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
-        
       </li>
     </ul>
   </div>
@@ -291,7 +224,7 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="https://github.com/maigeiye" target="_blank" rel="noopener">github</a>
+      <a class="nav-item-link" href="https://github.com/maigeiye" target="_blank" rel="noopener">Github</a>
     </li>
     
     <li class="nav-item">

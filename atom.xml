@@ -18,8 +18,8 @@
   
   <entry>
     <title>SpringBoot自动配置原理</title>
-    <link href="http://yoursite.com/2020/02/11/SpringBoot%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86/"/>
-    <id>http://yoursite.com/2020/02/11/SpringBoot%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86/</id>
+    <link href="http://yoursite.com/2020/02/11/SpringBoot-Automatic-Assembly/"/>
+    <id>http://yoursite.com/2020/02/11/SpringBoot-Automatic-Assembly/</id>
     <published>2020-02-11T13:01:22.000Z</published>
     <updated>2020-04-11T13:23:00.833Z</updated>
     
@@ -33,29 +33,6 @@
     
     
       <category term="Spring Boot" scheme="http://yoursite.com/categories/Spring-Boot/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>My Blog</title>
-    <link href="http://yoursite.com/2020/01/11/MyBlog/"/>
-    <id>http://yoursite.com/2020/01/11/MyBlog/</id>
-    <published>2020-01-11T07:23:03.000Z</published>
-    <updated>2020-04-11T07:25:34.455Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Hallo-Wolrd&quot;&gt;&lt;a href=&quot;#Hallo-Wolrd&quot; class=&quot;headerlink&quot; title=&quot;Hallo Wolrd!&quot;&gt;&lt;/a&gt;Hallo
-        
-      
-    
-    </summary>
-    
     
     
   </entry>

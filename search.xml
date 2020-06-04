@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>My Blog</title>
-    <url>/2020/01/11/MyBlog/</url>
-    <content><![CDATA[<h2 id="Hallo-Wolrd"><a href="#Hallo-Wolrd" class="headerlink" title="Hallo Wolrd!"></a>Hallo Wolrd!</h2>]]></content>
-  </entry>
-  <entry>
     <title>SpringBoot自动配置原理</title>
-    <url>/2020/02/11/SpringBoot%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86/</url>
+    <url>/2020/02/11/SpringBoot-Automatic-Assembly/</url>
     <content><![CDATA[<h2 id="自动配置介绍"><a href="#自动配置介绍" class="headerlink" title="自动配置介绍"></a>自动配置介绍</h2><p>​        使用Spring框架时，项目中需要的组件都要在配置文件中或者配置类进行注册导入容器，而在使用Spring Boot框架时，常用的组件都不再需要手动配置才能使用，主程序启动时会自动把所有用到的组件导入容器中，如果想要修改组件的默认配置，在Spring Boot主配置文件Application.properties中配置对应的属性即可。</p>
 <p>​        Spring Boot启动时自动导入组件是主程序中@SpringBootApplication注解实现的</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Target</span>(&#123;ElementType.TYPE&#125;)</span><br><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="meta">@Documented</span></span><br><span class="line"><span class="meta">@Inherited</span></span><br><span class="line"><span class="meta">@SpringBootConfiguration</span></span><br><span class="line"><span class="meta">@EnableAutoConfiguration</span></span><br><span class="line"><span class="meta">@ComponentScan</span>(excludeFilters = &#123;</span><br><span class="line">    <span class="meta">@Filter</span>(type = FilterType.CUSTOM, classes = &#123;TypeExcludeFilter<span class="class">.<span class="keyword">class</span>&#125;),</span></span><br><span class="line"><span class="class">    @<span class="title">Filter</span>(<span class="title">type</span> </span>= FilterType.CUSTOM, classes = &#123;AutoConfigurationExcludeFilter<span class="class">.<span class="keyword">class</span>&#125;) &#125;)</span></span><br><span class="line"><span class="class"><span class="title">public</span> @<span class="title">interface</span> <span class="title">SpringBootApplication</span> </span>&#123;</span><br></pre></td></tr></table></figure>
