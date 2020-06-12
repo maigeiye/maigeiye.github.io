@@ -1,34 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>认识一下基金</title>
+    <url>/2020/06/11/Fund/</url>
+    <content><![CDATA[<h4 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h4><p>基金简单来说就是让基金公司来帮你买股票，是一种间接投资工具，而且基金的底层资产其实并不只有股票，还可以是债券，黄金，指数，银行存款等等。基金投资的方式是分散投资，也就是同时投多个股票或者和债券结合等，所以与股票相比，基金的风险会小很多。</p>
+<blockquote>
+<p>简单介绍，后面就以支付宝中的基金模块来作为例子</p>
+<p>有些观点是个人见解，所以可能不能保证完全正确</p>
+</blockquote>
+<a id="more"></a>
+
+<p>进入支付宝理财页面的基金模块，这就是我们管理基金的地方</p>
+<p><img src="/source/images/fund1.jpg" alt="基金页面"></p>
+<h4 id="种类"><a href="#种类" class="headerlink" title="种类"></a>种类</h4><p>基金可以按持有资产和风险等级简单划分为三类（风险由低到高排序）：</p>
+<ul>
+<li>债券型基金</li>
+</ul>
+<p>债券是一种政府、工商企业等机构发行的债务凭证（简单来说就是借钱），债券基金80%以上都会投资于债券，也可能有一小部分投资于股票市场，所以债券基因收益稳定（较低），风险较低</p>
+<blockquote>
+<p>债券型基金走势一般是稳步上升，部分有投资股票的债基可能会有起伏波动</p>
+</blockquote>
+<p><img src="/source/images/fund2.jpg" alt="债券基金"></p>
+<ul>
+<li>指数型基金</li>
+</ul>
+<p>指数型基金的投资对象是特定指数的成份股，比如沪深300，那什么是指数呢，拿沪深300简单说一下，它是在上海和深圳证券市场中分别挑选的市值最大的300支蓝筹股构成的指数，可以反应A股（人民币普通股票）市场的总体走势，因为这300支股票的市值，利润在A股都有很大的占比</p>
+<blockquote>
+<p>指数型基金的走势几乎与对指数的走势是一致的</p>
+</blockquote>
+<p><img src="/source/images/fund3.jpg" alt="指数基金"></p>
+<ul>
+<li>股票型基金</li>
+</ul>
+<p>这类基金通常80%以上都是投资于股票，所以收益很高，风险也很高，但分散投资的方式又会使股票基金的风险低于购买单体股票。不同板块的基金表现也不一样，比如医疗消费板块的基金会比较稳定，总体呈上升趋势，科技板块的基金一般起伏较大（纯属个人见解）</p>
+<blockquote>
+<p>股票基金总体走势会和沪深300指数相似，这也侧面反映出沪深300的代表性，但是股票基金的起伏会更大</p>
+</blockquote>
+<p><img src="/source/images/fund4.jpg" alt="股票基金"></p>
+<blockquote>
+<p>我们通常会发现同一支基金可能会有A和C的后缀之分，他们的区别是收费方式不一样，A类基金买入时收取费用，不收服务费，适合长期投资，C类基金买入时不收取费用，收取服务费（按年收费，在净值中提取），适合短期投资</p>
+</blockquote>
+<h4 id="常用信息"><a href="#常用信息" class="headerlink" title="常用信息"></a>常用信息</h4><ul>
+<li>持仓</li>
+</ul>
+<p>在基金页面下方进入基金档案，里面都是关于这支基金的基金的详细信息，在持仓信息中可以看到这支基金的投资分布，以及持股的涨跌幅和占比</p>
+<p><img src="/source/images/fund5.jpg" alt="持仓"></p>
+<ul>
+<li>净值估算</li>
+</ul>
+<p>净值是基金的价值体现，净值估算是每天结算前根据当前持仓的涨跌和占比计算的，能预估当天的涨幅，对买入和卖出具有参考价值，但是不是绝对准确，当基金的持仓发生了改变而且没有及时更新的时候，净值估算就暂时跟实际涨跌幅不一致</p>
+<p><img src="/source/images/fund6.jpg" alt="净值估算"></p>
+<ul>
+<li>基金经理</li>
+</ul>
+<p>在基金页面的下方可以查看基金经理的资料以及他管理的基金情况，这对我们选择基金的时候具有一定的参考价值</p>
+<p><img src="/source/images/fund7.jpg" alt="基金经理"></p>
+<ul>
+<li>买卖规则</li>
+</ul>
+<p>在基金页面下方也有交易规则，持有时间较短卖出时需要支付较高的手续费，每个基金的交易规则也有所不同</p>
+<p><img src="/source/images/fund8.jpg" alt="卖出规则"></p>
+<h4 id="操作方式"><a href="#操作方式" class="headerlink" title="操作方式"></a>操作方式</h4><ul>
+<li>长期</li>
+</ul>
+<p>前面说到了，长期投资应该选择A类的基金，只支付申购费用即可，然后我们还需要选择一支长期处于增长走势的基金（这个就是属于个人选择了），可以选择一次买入，建议最好逢跌定投</p>
+<ul>
+<li>短期</li>
+</ul>
+<p>短期定投自然就要选择C类基金了，支付较少的管理费用即可，然后我们最好选择涨跌起伏较大的基金，在跌的时候买入涨的时候卖出，用一张图简单说明一下</p>
+<p><img src="/source/images/fund9.jpg" alt="短期投资"></p>
+<p>这个场景中，跌两天涨两天，我们在跌的时候逐次买入，然后涨了以后就卖出，虽然每次都跌了1%，但是买入加仓使底仓变大，在最低点的时候总体跌幅是小于2%的，所以涨了2%卖出以后其实就已经有受益了，这就是短期做波段最简单粗暴的方法，当然这里只是简单模拟，连卖出手续费都没算，现实中买入时机，加仓金额，卖出时机，都是要自己把握的</p>
+<h4 id="个人建议"><a href="#个人建议" class="headerlink" title="个人建议"></a>个人建议</h4><p>理财只是一种获得额外收入的方式，而基金可以让我们很方便并且投入较少的时间去理财，但是毕竟还是具有不小的风险，一定只能用闲置的存款去购买基金，量力而行，可以投入较少金额先了解清楚规则再继续后续投资。</p>
+]]></content>
+      <tags>
+        <tag>理财</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前后端分离项目中的异常处理</title>
+    <url>/2020/02/20/Exception-Handling/</url>
+    <content><![CDATA[<p>在前后端分离项目中，系统中的异常不适合直接传递到前端，我们可以用错误码和异常信息封装成的自定义异常类以json的形式发送到前端，前端再根据错误码指定的错误类型和错误信息对用户完成合适的提示，这篇文章就来具体说说怎么去实现这种异常处理方式</p>
+<a id="more"></a>
+
+<h4 id="通用返回模型"><a href="#通用返回模型" class="headerlink" title="通用返回模型"></a>通用返回模型</h4><p>为了方便后端向前端传送数据，我们得先实现一个适用所有场景的返回模型，这个模型包含请求的处理结果（成功与否）以及需要返回的数据模型</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CommonReturnType</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 表明对应请求的返回处理结果，success或fail</span></span><br><span class="line">    <span class="keyword">private</span> String status;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// success返回对应VO的json数据，fail则返回通用的错误码格式</span></span><br><span class="line">    <span class="keyword">private</span> Object data;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> CommonReturnType <span class="title">create</span><span class="params">(Object result)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> CommonReturnType.create(result, <span class="string">"success"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> CommonReturnType <span class="title">create</span><span class="params">(Object result, String status)</span> </span>&#123;</span><br><span class="line">        CommonReturnType type = <span class="keyword">new</span> CommonReturnType();</span><br><span class="line">        type.setStatus(status);</span><br><span class="line">        type.setData(result);</span><br><span class="line">        <span class="keyword">return</span> type;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getStatus</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> status;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setStatus</span><span class="params">(String status)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.status = status;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">getData</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> data;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setData</span><span class="params">(Object data)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.data = data;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个通用返回模型用在Controller中，整个Controller层都可以用这个模型向前端发送数据，然后前端可以解析json获取这个模型，根据响应状态和响应数据完成页面的构建</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/test"</span>)</span><br><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> CommonReturnType <span class="title">test</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 返回的json数据就是&#123;status:"success", data:null&#125;</span></span><br><span class="line">    <span class="keyword">return</span> CommonReturnType.create(<span class="keyword">null</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="业务异常模型"><a href="#业务异常模型" class="headerlink" title="业务异常模型"></a>业务异常模型</h4><p>前面我们说到需要一个用错误码和异常信息封装而成的自定义异常类，那我们可以使用装饰器模式来达到实现业务异常类并且封装业务异常类型的目的</p>
+<ul>
+<li>首先定义一个核心的错误接口，规范异常类的基本行为，可以获取错误码和错误信息以及覆盖原有的错误信息</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">CommonError</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getErrorCode</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function">String <span class="title">getErrorMsg</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function">CommonError <span class="title">setErrorMsg</span><span class="params">(String errorMsg)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>然后我们实现一个继承了错误接口的枚举类来封装业务异常类型（包含错误码以及错误描述），这里只简单定义了两种通用错误，各个业务模块需要的异常类型也同样可以封装进这个枚举类以供使用，并且实现setErrorMsg方法使枚举对象能够用自定义信息覆盖原始错误信息</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> EmBusinessError implements CommonError &#123;</span><br><span class="line">    <span class="comment">// 通用错误的错误码以及错误描述</span></span><br><span class="line">    UNKNOWN_ERROR(<span class="number">10001</span>, <span class="string">"未知错误"</span>),</span><br><span class="line">    PARAMETER_VALIDATION_ERROR(<span class="number">10002</span>, <span class="string">"参数错误"</span>),</span><br><span class="line">    ;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">EmBusinessError</span><span class="params">(<span class="keyword">int</span> errorCode, String errorMsg)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.errorCode = errorCode;</span><br><span class="line">        <span class="keyword">this</span>.errorMsg = errorMsg;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> errorCode;</span><br><span class="line">    <span class="keyword">private</span> String errorMsg;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getErrorCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.errorCode;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getErrorMsg</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.errorMsg;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> CommonError <span class="title">setErrorMsg</span><span class="params">(String errorMsg)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.errorMsg = errorMsg;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>最后我们实现业务异常类，需要实现错误接口并且继承Exception类，我们可以通过构造器直接把EmBusinessError内部的异常类型封装到业务异常类中</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BusinessException</span> <span class="keyword">extends</span> <span class="title">Exception</span> <span class="keyword">implements</span> <span class="title">CommonError</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> CommonError commonError;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 直接接收EmBusinessError用于构造业务异常</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">BusinessException</span><span class="params">(CommonError commonError)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">        <span class="keyword">this</span>.commonError = commonError;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 同时接收EmBusinessError和自定义错误信息并覆盖掉原本的错误信息</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">BusinessException</span><span class="params">(CommonError commonError, String errorMsg)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">        <span class="keyword">this</span>.commonError = commonError;</span><br><span class="line">        <span class="keyword">this</span>.commonError.setErrorMsg(errorMsg);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getErrorCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> commonError.getErrorCode();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getErrorMsg</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> commonError.getErrorMsg();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> CommonError <span class="title">setErrorMsg</span><span class="params">(String errorMsg)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> commonError.setErrorMsg(errorMsg);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>到这里就已经简单地实现了业务异常模型，现在我们可以用前面的通用返回模型来向前端发送异常信息了，而且我们需要一个只存储了异常对象中的错误码和错误信息的Map来作为通用返回模型的数据，这样才可以过滤一些无用的信息</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/test"</span>)</span><br><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> CommonReturnType <span class="title">test</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    BusinessException e = <span class="keyword">new</span> BusinessException(EmBusinessError.UNKNOWN_ERROR);</span><br><span class="line">    Map&lt;String, Object&gt; data = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    data.put(<span class="string">"errorCode"</span>, e.getErrorCode());</span><br><span class="line">    data.put(<span class="string">"errorMsg"</span>, e.getErrorMsg());</span><br><span class="line">    <span class="comment">// 返回的json数据就是&#123;status:"success", data:&#123;errorCode:10001, errorMsg:"未知错误"&#125;&#125;</span></span><br><span class="line">    <span class="keyword">return</span> CommonReturnType.create(data, <span class="string">"fail"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="全局异常处理"><a href="#全局异常处理" class="headerlink" title="全局异常处理"></a>全局异常处理</h4><p>虽然现在已经可以向前端发送系统的异常信息了，但是每次出现异常都需要这样去返回错误信息是真的麻烦，而且系统出现了其他异常还是会直接返回错误页面给前端，这样的结果显然是不合理的，如果可以把异常都抛出，然后实现一个全局异常处理，把异常都拦截下来，再根据不同类型的异常用通用返回模型给前端发送错误信息就好了</p>
+<p>好消息是SpringBoot提供的@ControllerAdvice和@ExceptionHandler两个注解可以帮我们实现这种操作，@ExceptionHandler能实现统一处理指定的一类异常，@ControllerAdvice是一种增强的Controller，可以用于定义@ExceptionHandler方法，适用于所有@RequestMapping方法，先看一下代码实现</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@ControllerAdvice</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GlobalExceptionHandler</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 统一处理所有的异常</span></span><br><span class="line">    <span class="meta">@ExceptionHandler</span>(Exception<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line"><span class="class">    @<span class="title">ResponseBody</span></span></span><br><span class="line"><span class="class">    <span class="title">public</span> <span class="title">CommonReturnType</span> <span class="title">doError</span>(<span class="title">Exception</span> <span class="title">e</span>) </span>&#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">        Map&lt;String, Object&gt; data = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span> (e <span class="keyword">instanceof</span> BusinessException) &#123;</span><br><span class="line">            BusinessException businessException = (BusinessException)e;</span><br><span class="line">            data.put(<span class="string">"errorCode"</span>, businessException.getErrorCode());</span><br><span class="line">            data.put(<span class="string">"errorMsg"</span>, businessException.getErrorMsg());</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (e <span class="keyword">instanceof</span> NoHandlerFoundException) &#123;</span><br><span class="line">            data.put(<span class="string">"errorCode"</span>, EmBusinessError.UNKNOWN_ERROR.getErrorCode());</span><br><span class="line">            data.put(<span class="string">"errorMsg"</span>, <span class="string">"没有找到访问路径"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            data.put(<span class="string">"errorCode"</span>, EmBusinessError.UNKNOWN_ERROR.getErrorCode());</span><br><span class="line">            data.put(<span class="string">"errorMsg"</span>,EmBusinessError.UNKNOWN_ERROR.getErrorMsg());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> CommonReturnType.create(data, <span class="string">"fail"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>通过实现了一个全局异常处理类，我们不仅可以处理业务异常，还可以处理404状态的异常以及其他所有的异常，这样前端接收到的永远都是规范的错误信息，我们也就可以放心地在Controller中抛出异常了</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/test"</span>, method = &#123;RequestMethod.GET&#125;)</span><br><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> CommonReturnType <span class="title">test</span><span class="params">(@RequestParam(name = <span class="string">"id"</span>)</span> Integer id) <span class="keyword">throws</span> BusinessException </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (id == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Spring Boot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>高并发场景下RocketMq实现Redis缓存和MySQL数据库的一致性</title>
+    <url>/2020/03/03/Mq-Cache-DB-Consistency/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>Message Queue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>SpringBoot自动配置原理</title>
     <url>/2020/02/11/SpringBoot-Automatic-Assembly/</url>
-    <content><![CDATA[<h2 id="自动配置介绍"><a href="#自动配置介绍" class="headerlink" title="自动配置介绍"></a>自动配置介绍</h2><p>​        使用Spring框架时，项目中需要的组件都要在配置文件中或者配置类进行注册导入容器，而在使用Spring Boot框架时，常用的组件都不再需要手动配置才能使用，主程序启动时会自动把所有用到的组件导入容器中，如果想要修改组件的默认配置，在Spring Boot主配置文件Application.properties中配置对应的属性即可。</p>
-<p>​        Spring Boot启动时自动导入组件是主程序中@SpringBootApplication注解实现的</p>
+    <content><![CDATA[<h2 id="自动配置介绍"><a href="#自动配置介绍" class="headerlink" title="自动配置介绍"></a>自动配置介绍</h2><p>使用Spring框架时，项目中需要的组件都要在配置文件中或者配置类进行注册导入容器，而在使用Spring Boot框架时，常用的组件都不再需要手动配置才能使用，主程序启动时会自动把所有用到的组件导入容器中，如果想要修改组件的默认配置，在Spring Boot主配置文件Application.properties中配置对应的属性即可。</p>
+<p>Spring Boot启动时自动导入组件是主程序中<strong>@SpringBootApplication</strong>注解实现的</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Target</span>(&#123;ElementType.TYPE&#125;)</span><br><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="meta">@Documented</span></span><br><span class="line"><span class="meta">@Inherited</span></span><br><span class="line"><span class="meta">@SpringBootConfiguration</span></span><br><span class="line"><span class="meta">@EnableAutoConfiguration</span></span><br><span class="line"><span class="meta">@ComponentScan</span>(excludeFilters = &#123;</span><br><span class="line">    <span class="meta">@Filter</span>(type = FilterType.CUSTOM, classes = &#123;TypeExcludeFilter<span class="class">.<span class="keyword">class</span>&#125;),</span></span><br><span class="line"><span class="class">    @<span class="title">Filter</span>(<span class="title">type</span> </span>= FilterType.CUSTOM, classes = &#123;AutoConfigurationExcludeFilter<span class="class">.<span class="keyword">class</span>&#125;) &#125;)</span></span><br><span class="line"><span class="class"><span class="title">public</span> @<span class="title">interface</span> <span class="title">SpringBootApplication</span> </span>&#123;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 
-<p>​        @SpringBootConfiguration是Spring Boot的配置类注解，内部由@Configuration标注，表明标注的类是Spring Boot的主配置类，运行此类的main方法来启动整个应用</p>
-<p>​</p>
-<p>​        @EnableAutoConfiguration是开启自动配置功能的注解，内部由两个注解标注</p>
+<p><strong>@SpringBootConfiguration</strong>是Spring Boot的配置类注解，内部由<strong>@Configuration</strong>标注，表明标注的类是Spring Boot的主配置类，运行此类的main方法来启动整个应用</p>
+<p><strong>@EnableAutoConfiguration</strong>是开启自动配置功能的注解，内部由两个注解标注</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@AutoConfigurationPackage</span></span><br><span class="line"><span class="meta">@Import</span>(&#123;EnableAutoConfigurationImportSelector<span class="class">.<span class="keyword">class</span>&#125;)</span></span><br><span class="line"><span class="class"><span class="title">public</span> @<span class="title">interface</span> <span class="title">EnableAutoConfiguration</span> </span>&#123;</span><br></pre></td></tr></table></figure>
 
-<p>​        1、注解@AutoConfigurationPackage是自动配置组件包的注解，由@Import导入组件Registrar.class，该组件会获取主配置类所在的包路径，然后将包和子包中所有组件扫描到容器中</p>
+<ul>
+<li>注解<strong>@AutoConfigurationPackage</strong>是自动配置组件包的注解，由<strong>@Import</strong>导入组件Registrar.class，该组件会获取主配置类所在的包路径，然后将包和子包中所有组件扫描到容器中</li>
+</ul>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Import</span>(&#123;Registrar<span class="class">.<span class="keyword">class</span>&#125;)</span></span><br><span class="line"><span class="class"><span class="title">public</span> @<span class="title">interface</span> <span class="title">AutoConfigurationPackage</span> </span>&#123;</span><br></pre></td></tr></table></figure>
 
-<p>​        2、@Import({EnableAutoConfigurationImportSelector.class})导入自动配置类选择器，选择器将返回所有需要的组件的自动配置类的全类名组成的数组，Import注解就会把这些自动配置类添加到容器中，这些自动配置类生效后会把对应的组件导入到容器中</p>
+<ul>
+<li>@Import({EnableAutoConfigurationImportSelector.class})导入自动配置类选择器，选择器将返回所有需要的组件的自动配置类的全类名组成的数组，Import注解就会把这些自动配置类添加到容器中，这些自动配置类生效后会把对应的组件导入到容器中</li>
+</ul>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">   <span class="comment">// EnableAutoConfigurationImportSelector.class</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> List&lt;String&gt; <span class="title">getCandidateConfigurations</span><span class="params">(AnnotationMetadata metadata, AnnotationAttributes attributes)</span> </span>&#123;</span><br><span class="line">       List&lt;String&gt; configurations = SpringFactoriesLoader.loadFactoryNames(<span class="keyword">this</span>.getSpringFactoriesLoaderFactoryClass(), <span class="keyword">this</span>.getBeanClassLoader());</span><br><span class="line">       Assert.notEmpty(configurations, <span class="string">"No auto configuration classes found in META-INF/spring.factories. If you are using a custom packaging, make sure that file is correct."</span>);</span><br><span class="line">       <span class="keyword">return</span> configurations;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
 
-<p>​        SpringFactoriesLoader.loadFactoryNames方法会扫描所有jar包类路径下的META-INF/spring.factories文件中获取自动配置类的全类名，然后这些自动配置类全部被导入容器，进行自动配置工作</p>
+<p>SpringFactoriesLoader.<strong>loadFactoryNames</strong>方法会扫描所有jar包类路径下的<strong>META-INF/spring.factories</strong>文件中获取自动配置类的全类名，然后这些自动配置类全部被导入容器，进行自动配置工作</p>
 <figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment"># spring-boot-autoconfigure-1.5.9.RELEASE.jar下META-INF/spring.factories</span></span><br><span class="line"><span class="comment"># Initializers</span></span><br><span class="line"><span class="meta">org.springframework.context.ApplicationContextInitializer</span>=<span class="string">\</span></span><br><span class="line">org.springframework.boot.autoconfigure.SharedMetadataReaderFactoryContextInitializer,\</span><br><span class="line"><span class="attr">org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Application Listeners</span></span><br><span class="line"><span class="meta">org.springframework.context.ApplicationListener</span>=<span class="string">\</span></span><br><span class="line"><span class="attr">org.springframework.boot.autoconfigure.BackgroundPreinitializer</span></span><br><span class="line"><span class="attr">...</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="自动配置类原理"><a href="#自动配置类原理" class="headerlink" title="自动配置类原理"></a>自动配置类原理</h2><p>​        Spring Boot通过@SpringBootConfiguration注解就能把项目的组件和常用组件的自动配置类都导入容器中，那么自动配置类是如何将组件导入容器的，就以HttpEncodingAutoConfiguration自动配置类为例说明一下自动配置类的原理</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// HttpEncodingAutoConfiguration.java</span></span><br><span class="line"><span class="meta">@Configuration</span>   <span class="comment">// 表示配置类，可以给容器添加组件</span></span><br><span class="line"><span class="meta">@EnableConfigurationProperties</span>(&#123;HttpProperties<span class="class">.<span class="keyword">class</span>&#125;)    //启动指定类的<span class="title">ConfigurationProperties</span>功能，会将配置文件中对应的值和<span class="title">HttpEncodingProperties</span>属性绑定，并把该类导入到<span class="title">IOC</span>容器</span></span><br><span class="line"><span class="class">@<span class="title">ConditionalOnWebApplication</span>  // <span class="title">Spring</span>底层注解<span class="title">Conditional</span>，根据不同的条件，如果满足指定条件，整个配置类生效</span></span><br><span class="line"><span class="class">@<span class="title">ConditionalOnClass</span>(</span>&#123;CharacterEncodingFilter<span class="class">.<span class="keyword">class</span>&#125;)  // 判断当前项目有无此类</span></span><br><span class="line"><span class="class">@<span class="title">ConditionalOnProperty</span>(<span class="title">prefix</span> </span>= <span class="string">"spring.http.encoding"</span>,value = &#123;<span class="string">"enabled"</span>&#125;,matchIfMissing =</span><br><span class="line"><span class="keyword">true</span>)  <span class="comment">// 判断是否存在该配置（spring.http.encoding.enabled），不配置默认为true</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HttpEncodingAutoConfiguration</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> HttpEncodingProperties properties;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 构造器注入依赖</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">HttpEncodingAutoConfiguration</span><span class="params">(HttpEncodingProperties properties)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.properties = properties;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span>  <span class="comment">// 给容器添加组件CharacterEncodingFilter，组件需要的值从properties中获取，即HttpEncodingProperties</span></span><br><span class="line">    <span class="meta">@ConditionalOnMissingBean</span>(&#123;CharacterEncodingFilter<span class="class">.<span class="keyword">class</span>&#125;) // 容器中没有该组件</span></span><br><span class="line"><span class="class">    <span class="title">public</span> <span class="title">CharacterEncodingFilter</span> <span class="title">characterEncodingFilter</span>() </span>&#123;</span><br><span class="line">        CharacterEncodingFilter filter = <span class="keyword">new</span> OrderedCharacterEncodingFilter();</span><br><span class="line">        filter.setEncoding(<span class="keyword">this</span>.properties.getCharset().name());</span><br><span class="line">        filter.setForceRequestEncoding(<span class="keyword">this</span>.properties.shouldForce(Type.REQUEST));</span><br><span class="line">        filter.setForceResponseEncoding(<span class="keyword">this</span>.properties.shouldForce(Type.RESPONSE));</span><br><span class="line">        <span class="keyword">return</span> filter;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="自动配置类原理"><a href="#自动配置类原理" class="headerlink" title="自动配置类原理"></a>自动配置类原理</h2><p>Spring Boot通过@SpringBootConfiguration注解就能把项目的组件和常用组件的自动配置类都导入容器中，那么自动配置类是如何将组件导入容器的，就以<strong>HttpEncodingAutoConfiguration</strong>自动配置类为例说明一下自动配置类的原理</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// HttpEncodingAutoConfiguration.java</span></span><br><span class="line"><span class="comment">// 表示配置类，可以给容器添加组件</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="comment">//启动指定类的ConfigurationProperties功能，会将配置文件中对应的值和HttpEncodingProperties属性绑定，并把该类导入到IOC容器</span></span><br><span class="line"><span class="meta">@EnableConfigurationProperties</span>(&#123;HttpProperties<span class="class">.<span class="keyword">class</span>&#125;)</span></span><br><span class="line"><span class="class">// <span class="title">Spring</span>底层注解<span class="title">Conditional</span>，根据不同的条件，如果满足指定条件，整个配置类生效</span></span><br><span class="line"><span class="class">@<span class="title">ConditionalOnWebApplication</span></span></span><br><span class="line"><span class="class">// 判断当前项目有无此类</span></span><br><span class="line"><span class="class">@<span class="title">ConditionalOnClass</span>(</span>&#123;CharacterEncodingFilter<span class="class">.<span class="keyword">class</span>&#125;)</span></span><br><span class="line"><span class="class">// 判断是否存在该配置（<span class="title">spring</span>.<span class="title">http</span>.<span class="title">encoding</span>.<span class="title">enabled</span>），不配置默认为<span class="title">true</span></span></span><br><span class="line"><span class="class">@<span class="title">ConditionalOnProperty</span>(<span class="title">prefix</span> </span>= <span class="string">"spring.http.encoding"</span>,value = &#123;<span class="string">"enabled"</span>&#125;,matchIfMissing=<span class="keyword">true</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HttpEncodingAutoConfiguration</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> HttpEncodingProperties properties;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 构造器注入依赖</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">HttpEncodingAutoConfiguration</span><span class="params">(HttpEncodingProperties properties)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.properties = properties;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 给容器添加组件CharacterEncodingFilter，组件需要的值从properties中获取，即HttpEncodingProperties</span></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="comment">// 容器中没有该组件就自动加载，可以自定义</span></span><br><span class="line">    <span class="meta">@ConditionalOnMissingBean</span>(&#123;CharacterEncodingFilter<span class="class">.<span class="keyword">class</span>&#125;)</span></span><br><span class="line"><span class="class">    <span class="title">public</span> <span class="title">CharacterEncodingFilter</span> <span class="title">characterEncodingFilter</span>() </span>&#123;</span><br><span class="line">        CharacterEncodingFilter filter = <span class="keyword">new</span> OrderedCharacterEncodingFilter();</span><br><span class="line">        filter.setEncoding(<span class="keyword">this</span>.properties.getCharset().name());</span><br><span class="line">        filter.setForceRequestEncoding(<span class="keyword">this</span>.properties.shouldForce(Type.REQUEST));</span><br><span class="line">        filter.setForceResponseEncoding(<span class="keyword">this</span>.properties.shouldForce(Type.RESPONSE));</span><br><span class="line">        <span class="keyword">return</span> filter;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-<p>​        *Properties.class都是组件属性和配置文件映射的类，这些类中封装着组件能配置的属性，@EnableConfigurationProperties({HttpProperties.class})就是把配置文件中HttpEncoding组件的属性绑定到HttpProperties.class的对应属性中</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@ConfigurationProperties</span>(prefix = <span class="string">"spring.http"</span>) <span class="comment">//从配置文件中获取指定的值bean的属性进行绑定</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HttpProperties</span> </span>&#123;</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>*Properties.class</strong>都是组件属性和配置文件映射的类，这些类中封装着组件能配置的属性，@EnableConfigurationProperties({HttpProperties.class})就是把配置文件中HttpEncoding组件的属性绑定到HttpProperties.class的对应属性中</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//从配置文件中获取指定的值bean的属性进行绑定</span></span><br><span class="line"><span class="meta">@ConfigurationProperties</span>(prefix = <span class="string">"spring.http"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HttpProperties</span> </span>&#123;</span><br></pre></td></tr></table></figure>
 
 
 ]]></content>

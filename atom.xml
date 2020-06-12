@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-11T13:23:00.833Z</updated>
+  <updated>2020-06-12T07:35:10.225Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,16 +17,75 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>认识一下基金</title>
+    <link href="http://yoursite.com/2020/06/11/Fund/"/>
+    <id>http://yoursite.com/2020/06/11/Fund/</id>
+    <published>2020-06-11T10:30:44.000Z</published>
+    <updated>2020-06-12T07:35:10.225Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;简单介绍&quot;&gt;&lt;a href=&quot;#简单介绍&quot; class=&quot;headerlink&quot; title=&quot;简单介绍&quot;&gt;&lt;/a&gt;简单介绍&lt;/h4&gt;&lt;p&gt;基金简单来说就是让基金公司来帮你买股票，是一种间接投资工具，而且基金的底层资产其实并不只有股票，还可以是债券，黄金，指数，银行存款等等。基金投资的方式是分散投资，也就是同时投多个股票或者和债券结合等，所以与股票相比，基金的风险会小很多。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;简单介绍，后面就以支付宝中的基金模块来作为例子&lt;/p&gt;
+&lt;p&gt;有些观点是个人见解，所以可能不能保证完全正确&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="理财" scheme="http://yoursite.com/tags/%E7%90%86%E8%B4%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>高并发场景下RocketMq实现Redis缓存和MySQL数据库的一致性</title>
+    <link href="http://yoursite.com/2020/03/03/Mq-Cache-DB-Consistency/"/>
+    <id>http://yoursite.com/2020/03/03/Mq-Cache-DB-Consistency/</id>
+    <published>2020-03-03T06:37:51.000Z</published>
+    <updated>2020-06-07T02:39:57.595Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+      <category term="Message Queue" scheme="http://yoursite.com/tags/Message-Queue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前后端分离项目中的异常处理</title>
+    <link href="http://yoursite.com/2020/02/20/Exception-Handling/"/>
+    <id>http://yoursite.com/2020/02/20/Exception-Handling/</id>
+    <published>2020-02-20T02:05:17.000Z</published>
+    <updated>2020-06-12T07:34:49.172Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在前后端分离项目中，系统中的异常不适合直接传递到前端，我们可以用错误码和异常信息封装成的自定义异常类以json的形式发送到前端，前端再根据错误码指定的错误类型和错误信息对用户完成合适的提示，这篇文章就来具体说说怎么去实现这种异常处理方式&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="Spring Boot" scheme="http://yoursite.com/tags/Spring-Boot/"/>
+    
+  </entry>
+  
+  <entry>
     <title>SpringBoot自动配置原理</title>
     <link href="http://yoursite.com/2020/02/11/SpringBoot-Automatic-Assembly/"/>
     <id>http://yoursite.com/2020/02/11/SpringBoot-Automatic-Assembly/</id>
     <published>2020-02-11T13:01:22.000Z</published>
-    <updated>2020-04-11T13:23:00.833Z</updated>
+    <updated>2020-06-10T11:02:49.972Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;自动配置介绍&quot;&gt;&lt;a href=&quot;#自动配置介绍&quot; class=&quot;headerlink&quot; title=&quot;自动配置介绍&quot;&gt;&lt;/a&gt;自动配置介绍&lt;/h2&gt;&lt;p&gt;​        使用Spring框架时，项目中需要的组件都要在配置文件中或者配置类进行注册导入容器，而在使用Spring Boot框架时，常用的组件都不再需要手动配置才能使用，主程序启动时会自动把所有用到的组件导入容器中，如果想要修改组件的默认配置，在Spring Boot主配置文件Application.properties中配置对应的属性即可。&lt;/p&gt;
-&lt;p&gt;​        Spring Boot启动时自动导入组件是主程序中@SpringBootApplication注解实现的&lt;/p&gt;
+      &lt;h2 id=&quot;自动配置介绍&quot;&gt;&lt;a href=&quot;#自动配置介绍&quot; class=&quot;headerlink&quot; title=&quot;自动配置介绍&quot;&gt;&lt;/a&gt;自动配置介绍&lt;/h2&gt;&lt;p&gt;使用Spring框架时，项目中需要的组件都要在配置文件中或者配置类进行注册导入容器，而在使用Spring Boot框架时，常用的组件都不再需要手动配置才能使用，主程序启动时会自动把所有用到的组件导入容器中，如果想要修改组件的默认配置，在Spring Boot主配置文件Application.properties中配置对应的属性即可。&lt;/p&gt;
+&lt;p&gt;Spring Boot启动时自动导入组件是主程序中&lt;strong&gt;@SpringBootApplication&lt;/strong&gt;注解实现的&lt;/p&gt;
 &lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;@Target&lt;/span&gt;(&amp;#123;ElementType.TYPE&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;@Retention&lt;/span&gt;(RetentionPolicy.RUNTIME)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;@Documented&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;@Inherited&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;@SpringBootConfiguration&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;@EnableAutoConfiguration&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;@ComponentScan&lt;/span&gt;(excludeFilters = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;meta&quot;&gt;@Filter&lt;/span&gt;(type = FilterType.CUSTOM, classes = &amp;#123;TypeExcludeFilter&lt;span class=&quot;class&quot;&gt;.&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt;&amp;#125;),&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;    @&lt;span class=&quot;title&quot;&gt;Filter&lt;/span&gt;(&lt;span class=&quot;title&quot;&gt;type&lt;/span&gt; &lt;/span&gt;= FilterType.CUSTOM, classes = &amp;#123;AutoConfigurationExcludeFilter&lt;span class=&quot;class&quot;&gt;.&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt;&amp;#125;) &amp;#125;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;title&quot;&gt;public&lt;/span&gt; @&lt;span class=&quot;title&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;SpringBootApplication&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
