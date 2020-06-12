@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-12T07:49:40.504Z</updated>
+  <updated>2020-06-12T08:14:32.940Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="http://yoursite.com/2020/06/11/Fund/"/>
     <id>http://yoursite.com/2020/06/11/Fund/</id>
     <published>2020-06-11T10:30:44.000Z</published>
-    <updated>2020-06-12T07:49:40.504Z</updated>
+    <updated>2020-06-12T08:14:32.940Z</updated>
     
     <summary type="html">
     
-      &lt;h4 id=&quot;简单介绍&quot;&gt;&lt;a href=&quot;#简单介绍&quot; class=&quot;headerlink&quot; title=&quot;简单介绍&quot;&gt;&lt;/a&gt;简单介绍&lt;/h4&gt;&lt;p&gt;基金简单来说就是让基金公司来帮你买股票，是一种间接投资工具，而且基金的底层资产其实并不只有股票，还可以是债券，黄金，指数，银行存款等等。基金投资的方式是分散投资，也就是同时投多个股票或者和债券结合等，所以与股票相比，基金的风险会小很多。&lt;/p&gt;
+      &lt;h2 id=&quot;简单介绍&quot;&gt;&lt;a href=&quot;#简单介绍&quot; class=&quot;headerlink&quot; title=&quot;简单介绍&quot;&gt;&lt;/a&gt;简单介绍&lt;/h2&gt;&lt;p&gt;基金简单来说就是让基金公司来帮你买股票，是一种间接投资工具，而且基金的底层资产其实并不只有股票，还可以是债券，黄金，指数，银行存款等等。基金投资的方式是分散投资，也就是同时投多个股票或者和债券结合等，所以与股票相比，基金的风险会小很多。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;简单介绍，后面就以支付宝中的基金模块来作为例子&lt;/p&gt;
 &lt;p&gt;有些观点是个人见解，所以可能不能保证完全正确&lt;/p&gt;
@@ -61,7 +61,7 @@
     <link href="http://yoursite.com/2020/02/20/Exception-Handling/"/>
     <id>http://yoursite.com/2020/02/20/Exception-Handling/</id>
     <published>2020-02-20T02:05:17.000Z</published>
-    <updated>2020-06-12T07:45:57.966Z</updated>
+    <updated>2020-06-12T08:12:45.702Z</updated>
     
     <summary type="html">
     
