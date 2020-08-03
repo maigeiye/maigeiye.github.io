@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>高并发场景下RocketMq实现Redis缓存和MySQL数据库的一致性</title>
+    <url>/2020/03/03/Mq-Cache-DB-Consistency/</url>
+    <content><![CDATA[<p><img src="/images/RocketMQ-Transaction.jpg" alt="RocketMQ-Transaction"></p>
+]]></content>
+      <categories>
+        <category>Message Queue</category>
+      </categories>
+  </entry>
+  <entry>
     <title>前后端分离项目中的异常处理</title>
     <url>/2020/02/20/Exception-Handling/</url>
     <content><![CDATA[<p>在前后端分离项目中，系统中的异常不适合直接传递到前端，我们可以用错误码和异常信息封装成的自定义异常类以json的形式发送到前端，前端再根据错误码指定的错误类型和错误信息对用户完成合适的提示，这篇文章就来具体说说怎么去实现这种异常处理方式</p>
@@ -51,15 +60,6 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/test"</span>, method = &#123;RequestMethod.GET&#125;)</span><br><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> CommonReturnType <span class="title">test</span><span class="params">(@RequestParam(name = <span class="string">"id"</span>)</span> Integer id) <span class="keyword">throws</span> BusinessException </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (id == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Spring Boot</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>高并发场景下RocketMq实现Redis缓存和MySQL数据库的一致性</title>
-    <url>/2020/03/03/Mq-Cache-DB-Consistency/</url>
-    <content><![CDATA[<p><img src="/images/RocketMQ-Transaction.jpg" alt="RocketMQ-Transaction"></p>
-]]></content>
-      <categories>
-        <category>Message Queue</category>
       </categories>
   </entry>
   <entry>
