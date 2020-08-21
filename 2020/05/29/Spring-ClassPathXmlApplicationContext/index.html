@@ -68,7 +68,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">377</span>
+            <span class="post-count">885</span>
         </span>
     </span>
 
@@ -77,7 +77,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1 分钟</span>
+            <span class="post-count">3 分钟</span>
         </span>
     </span>
 </div>
@@ -111,8 +111,24 @@
 <p><img src="/images/ApplicationContext.png" alt="Application"></p>
 <p>但是ApplicationContext不是Spring容器的顶层接口，Spring容器最顶层的接口为BeanFactory，ApplicationContext也只是BeanFactory的一个子接口，BeanFactory负责生产和管理各个Bean实例，BeanFactory有三大子接口，分别为ListableBeanFactory（可以枚举工厂生产的所有Bean实例）、HierarchicalBeanFactory（实现工厂分层，可以返回父工厂）、AutowireCapableBeanFactory（实现对容器中实例的管理，负责自动装配Bean）</p>
 <p><img src="/images/BeanFactory.png" alt="BeanFactory"></p>
-<p>从继承关系中可以看到ApplicationContext只实现了ListableBeanFactory和HierarchicalBeanFactory，并没有实现AutowireCapableBeanFactory接口，而是在内部通过组合的方式集成了AutowireCapableBeanFactory的功能，通过简析ClassPathXmlApplicationContext实现原理就能解答这个问题，并且初步窥探Spring容器的机制</p>
+<p>从继承关系中可以看到ApplicationContext只实现了ListableBeanFactory和HierarchicalBeanFactory，并没有实现AutowireCapableBeanFactory接口，而是在内部以组合的方式集成了AutowireCapableBeanFactory的功能，通过简析ClassPathXmlApplicationContext实现原理就能解答这个问题，并且初步窥探Spring容器的机制</p>
+<p>我们创建ClassPathXmlApplicationContext时构造器简单来说干了两件最主要的事，分别是BeanFactory的初始化和Bean的实例化，完成后便完成构造完成的容器对象</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">refresh</span><span class="params">()</span> <span class="keyword">throws</span> BeansException, IllegalStateException </span>&#123;</span><br><span class="line">    <span class="keyword">synchronized</span> (<span class="keyword">this</span>.startupShutdownMonitor) &#123;</span><br><span class="line">        prepareRefresh();</span><br><span class="line">        <span class="comment">// 初始化BeanFactory</span></span><br><span class="line">        ConfigurableListableBeanFactory beanFactory = obtainFreshBeanFactory();</span><br><span class="line">        ...</span><br><span class="line">            <span class="comment">// 初始化所有的Bean</span></span><br><span class="line">            finishBeanFactoryInitialization(beanFactory);</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+
+
+<h2 id="BeanFactory初始化"><a href="#BeanFactory初始化" class="headerlink" title="BeanFactory初始化"></a>BeanFactory初始化</h2><p>BeanFactory的初始化是在obtainFreshBeanFactory()方法中完成的，BeanFactory初始化的过程包括创建BeanFactory、从配置文件加载Bean和把Bean注册到BeanFactory中，而且值得一提的是在这个方法中，如果已经启动了BeanFactory就会关闭，然后再重新进行BeanFactory初始化</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">final</span> <span class="keyword">void</span> <span class="title">refreshBeanFactory</span><span class="params">()</span> <span class="keyword">throws</span> BeansException </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (hasBeanFactory()) &#123;</span><br><span class="line">		destroyBeans();</span><br><span class="line">		closeBeanFactory();</span><br><span class="line">	&#125;</span><br><span class="line">    ...</span><br><span class="line">        <span class="comment">// 创建一个DefaultListableBeanFactory实例</span></span><br><span class="line">        DefaultListableBeanFactory beanFactory = createBeanFactory();</span><br><span class="line">    ...</span><br><span class="line">        <span class="comment">// 加载并注册Bean</span></span><br><span class="line">        loadBeanDefinitions(beanFactory);</span><br><span class="line">        <span class="keyword">synchronized</span> (<span class="keyword">this</span>.beanFactoryMonitor) &#123;</span><br><span class="line">            <span class="comment">// 把DefaultListableBeanFactory组合到当前ClassPathXmlApplicationContext对象中</span></span><br><span class="line">        	<span class="keyword">this</span>.beanFactory = beanFactory;</span><br><span class="line">      	&#125;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>从这里可以看出，ApplicationContext并不是自己直接存储Bean，而是持有一个BeanFactory接口最底层的一个实现类DefaultListableBeanFactory，这个类同时实现了BeanFactory三大子接口，具备所有扩展功能，所以ApplicationContext是用它来存储Bean的</p>
+<p>实例化BeanFactory后就调用loadBeanDefinitions()把Bean从配置文件中加载到并注册到容器中，这里只是注册，并没有对Bean进行实例化，这个方法的过程非常复杂，首先通过解析xml配置文件把配置的Bean变成BeanDefinition，这个类存储很多关于Bean的信息，把Bean注册到BeanFactory就是把其对应的BeanDefinition存储到BeanFactory中</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">registerBeanDefinition</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">      BeanDefinitionHolder definitionHolder, BeanDefinitionRegistry registry)</span></span></span><br><span class="line"><span class="function">      <span class="keyword">throws</span> BeanDefinitionStoreException </span>&#123;</span><br><span class="line">	String beanName = definitionHolder.getBeanName();</span><br><span class="line">    registry.registerBeanDefinition(beanName, definitionHolder.getBeanDefinition());</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注册Bean核心操作没有特别复杂，以BeanName为key，BeanDefinition为value存入DefaultListableBeanFactory持有的BeanDefinitionMap中即可</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">registerBeanDefinition</span><span class="params">(String beanName, BeanDefinition beanDefinition)</span></span></span><br><span class="line"><span class="function">      <span class="keyword">throws</span> BeanDefinitionStoreException </span>&#123;</span><br><span class="line">	...</span><br><span class="line">        <span class="keyword">this</span>.beanDefinitionMap.put(beanName, beanDefinition);</span><br><span class="line">    	<span class="keyword">this</span>.beanDefinitionNames.add(beanName);</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>到此BeanFactory初始化就已经完成，在初始化的过程中ApplicationContext持有一个实例化的DefaultListableBeanFactory，并且从配置文件中读取到所有的Bean信息封装成BeanDefinition并存入到容器的Map中以此作为注册操作</p>
+<h2 id="Bean实例化"><a href="#Bean实例化" class="headerlink" title="Bean实例化"></a>Bean实例化</h2>
       
       <!-- reward -->
       
