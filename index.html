@@ -95,6 +95,10 @@
   <time datetime="2020-06-21T00:32:35.000Z" itemprop="datePublished">2020-06-21</time>
 </a>
       
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
       
       
       
@@ -124,8 +128,80 @@
     <footer class="article-footer">
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
 
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+</article>
+
+    
+    <article id="post-Spring-ClassPathXmlApplicationContext" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/05/29/Spring-ClassPathXmlApplicationContext/"
+    >简析Spring的IOC容器机制</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/05/29/Spring-ClassPathXmlApplicationContext/" class="article-date">
+  <time datetime="2020-05-29T06:03:49.000Z" itemprop="datePublished">2020-05-29</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Spring/">Spring</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h2 id="Spring的容器"><a href="#Spring的容器" class="headerlink" title="Spring的容器"></a>Spring的容器</h2><p>我们在启动Spring的时候首先得起个容器，通过xml配置文件来得到一个Spring容器是一个很常见的操作，还有两个常用的容器为FileSystemXmlApplicationContext和AnnotationConfigApplicationContext，这三个容器都实现类ApplicationContext这个接口，这个接口构造的容器，会采取立即加载和创建Bean的机制，即读取完配置文件后直接创建配置文件中配置的对象</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ApplicationContext context = <span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"classpath:application.xml"</span>);</span><br></pre></td></tr></table></figure>
+      
+      <a class="article-more-link" href="/2020/05/29/Spring-ClassPathXmlApplicationContext/">阅读更多...</a>
+      
+      
+      <!-- reward -->
+      
+    </div>
+    
+
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
 
     </footer>
 

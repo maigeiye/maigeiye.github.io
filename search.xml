@@ -140,8 +140,26 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IOCStarter</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Class.forName(ApplicationContext<span class="class">.<span class="keyword">class</span>.<span class="title">getName</span>())</span>;</span><br><span class="line">        Class.forName(DependencyInjection<span class="class">.<span class="keyword">class</span>.<span class="title">getName</span>())</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
-      <tags>
-        <tag>Java</tag>
-      </tags>
+      <categories>
+        <category>Java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>简析Spring的IOC容器机制</title>
+    <url>/2020/05/29/Spring-ClassPathXmlApplicationContext/</url>
+    <content><![CDATA[<h2 id="Spring的容器"><a href="#Spring的容器" class="headerlink" title="Spring的容器"></a>Spring的容器</h2><p>我们在启动Spring的时候首先得起个容器，通过xml配置文件来得到一个Spring容器是一个很常见的操作，还有两个常用的容器为FileSystemXmlApplicationContext和AnnotationConfigApplicationContext，这三个容器都实现类ApplicationContext这个接口，这个接口构造的容器，会采取立即加载和创建Bean的机制，即读取完配置文件后直接创建配置文件中配置的对象</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ApplicationContext context = <span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"classpath:application.xml"</span>);</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<h2 id="容器类的继承关系"><a href="#容器类的继承关系" class="headerlink" title="容器类的继承关系"></a>容器类的继承关系</h2><p>先来看用来构造容器的接口ApplicationContext接口的子类关系图，三个常用容器实现类都处于ApplicationContext接口继承关系的底层，FileSystemXmlApplicationContext和ClassPathXmlApplicationContext为同一类，都需要xml配置文件，而AnnotationConfigApplicationContext则处于另一个分支，不需要配置文件</p>
+<p><img src="/images/ApplicationContext.png" alt="Application"></p>
+<p>但是ApplicationContext不是Spring容器的顶层接口，Spring容器最顶层的接口为BeanFactory，ApplicationContext也只是BeanFactory的一个子接口，BeanFactory负责生产和管理各个Bean实例，BeanFactory有三大子接口，分别为ListableBeanFactory（可以枚举工厂生产的所有Bean实例）、HierarchicalBeanFactory（实现工厂分层，可以返回父工厂）、AutowireCapableBeanFactory（实现对容器中实例的管理，负责自动装配Bean）</p>
+<p><img src="/images/BeanFactory.png" alt="BeanFactory"></p>
+<p>从继承关系中可以看到ApplicationContext只实现了ListableBeanFactory和HierarchicalBeanFactory，并没有实现AutowireCapableBeanFactory接口，而是在内部通过组合的方式集成了AutowireCapableBeanFactory的功能，通过简析ClassPathXmlApplicationContext实现原理就能解答这个问题，并且初步窥探Spring容器的机制</p>
+]]></content>
+      <categories>
+        <category>Spring</category>
+      </categories>
   </entry>
 </search>

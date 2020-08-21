@@ -9,7 +9,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    Tag: Java |  麦给野
+    简析Spring的IOC容器机制 |  麦给野
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -36,54 +36,243 @@
   <div id="app">
     <main class="content on">
       <section class="outer">
-  <article class="articles">
+  <article id="post-Spring-ClassPathXmlApplicationContext" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
     
-    
-    <h1 class="page-type-title">#&nbspJava</h1>
-    
-    
-  
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2020" class="archive-year">2020</a>
-    </div>
-    <div class="archives">
-      
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/06/21/IOC-achieve/" class="archive-article-date">
-  <time datetime="2020-06-21T00:32:35.000Z" itemprop="datePublished">06/21</time>
-</a>
+    <header class="article-header">
        
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2020/06/21/IOC-achieve/"
-    >三步实现简易的IOC</a> 
-</h2>
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  简析Spring的IOC容器机制
+</h1>
  
 
     </header>
     
-    
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
 
     
-  </div>
-</article>
+    <div class="article-meta">
+      <a href="/2020/05/29/Spring-ClassPathXmlApplicationContext/" class="article-date">
+  <time datetime="2020-05-29T06:03:49.000Z" itemprop="datePublished">2020-05-29</time>
+</a>
       
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Spring/">Spring</a>
+  </div>
+
+      
+      
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">377</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">1 分钟</span>
+        </span>
+    </span>
+</div>
+
       
     </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h2 id="Spring的容器"><a href="#Spring的容器" class="headerlink" title="Spring的容器"></a>Spring的容器</h2><p>我们在启动Spring的时候首先得起个容器，通过xml配置文件来得到一个Spring容器是一个很常见的操作，还有两个常用的容器为FileSystemXmlApplicationContext和AnnotationConfigApplicationContext，这三个容器都实现类ApplicationContext这个接口，这个接口构造的容器，会采取立即加载和创建Bean的机制，即读取完配置文件后直接创建配置文件中配置的对象</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ApplicationContext context = <span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"classpath:application.xml"</span>);</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<h2 id="容器类的继承关系"><a href="#容器类的继承关系" class="headerlink" title="容器类的继承关系"></a>容器类的继承关系</h2><p>先来看用来构造容器的接口ApplicationContext接口的子类关系图，三个常用容器实现类都处于ApplicationContext接口继承关系的底层，FileSystemXmlApplicationContext和ClassPathXmlApplicationContext为同一类，都需要xml配置文件，而AnnotationConfigApplicationContext则处于另一个分支，不需要配置文件</p>
+<p><img src="/images/ApplicationContext.png" alt="Application"></p>
+<p>但是ApplicationContext不是Spring容器的顶层接口，Spring容器最顶层的接口为BeanFactory，ApplicationContext也只是BeanFactory的一个子接口，BeanFactory负责生产和管理各个Bean实例，BeanFactory有三大子接口，分别为ListableBeanFactory（可以枚举工厂生产的所有Bean实例）、HierarchicalBeanFactory（实现工厂分层，可以返回父工厂）、AutowireCapableBeanFactory（实现对容器中实例的管理，负责自动装配Bean）</p>
+<p><img src="/images/BeanFactory.png" alt="BeanFactory"></p>
+<p>从继承关系中可以看到ApplicationContext只实现了ListableBeanFactory和HierarchicalBeanFactory，并没有实现AutowireCapableBeanFactory接口，而是在内部通过组合的方式集成了AutowireCapableBeanFactory的功能，通过简析ClassPathXmlApplicationContext实现原理就能解答这个问题，并且初步窥探Spring容器的机制</p>
+
+      
+      <!-- reward -->
+      
+    </div>
+    
+
+      <!-- copyright -->
+      
+        <div class="declare">
+          <ul class="post-copyright">
+            <li>
+              <i class="ri-copyright-line"></i>
+              <!--<strong>Copyright-Hinweis： </strong>-->
+            </li>
+          </ul>
+        </div>
+        
+    <footer class="article-footer">
+      
+          
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2020/05/29/Spring-ClassPathXmlApplicationContext/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>
+      
+      
+
+    </footer>
+
   </div>
+
   
+  
+  <nav class="article-nav">
+    
+      <a href="/2020/06/21/IOC-achieve/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            三步实现简易的IOC
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2020/03/03/Mq-Cache-DB-Consistency/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">高并发场景下RocketMq实现Redis缓存和MySQL数据库的一致性</div>
+      </a>
+    
+  </nav>
+
+
   
 
   
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        app_id: '',
+        app_key: '',
+        path: window.location.pathname,
+        notify: 'false',
+        verify: 'false',
+        avatar: 'monsterid',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+  
+  
+
+</article>
+
 </section>
       <footer class="footer">
   <div class="outer">
@@ -221,6 +410,24 @@
 
 
 
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto'
+  });
+</script>
 
 
 
