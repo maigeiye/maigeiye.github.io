@@ -246,7 +246,7 @@
 <p><img src="/images/redis-storage-structure.jpg" alt="redis-storage-structure.jpg"></p>
 <a id="more"></a>
 
-<h3 id="redisServer"><a href="#redisServer" class="headerlink" title="redisServer"></a>redisServer</h3><p>Redis会在main函数中初始化一个redisServer作为Redis服务器的实体，db数组的每一项都是redisDb结构，即Redis数据库，Redis默认是有16个数据库的</p>
+<h3 id="redisServer"><a href="#redisServer" class="headerlink" title="redisServer"></a>redisServer</h3><p>Redis启动时会在main函数中初始化一个redisServer作为Redis服务器的实体，db数组的每一项都是redisDb结构，即Redis数据库，Redis默认是有16个数据库的</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// server.h</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">redisServer</span> &#123;</span></span><br><span class="line">    ...</span><br><span class="line">    redisDb *db;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">int</span> dbnum;                      <span class="comment">/* Total number of configured DBs */</span></span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="redisDb"><a href="#redisDb" class="headerlink" title="redisDb"></a>redisDb</h3><p>redisDb就是Redis的具体某个数据库，可以用SELECT命令切换当前使用的数据库，redisDb内部有两个dict结构的指针，dict用于存储数据，expires用于存储过期数据</p>
@@ -308,7 +308,8 @@
 <h4 id="OBJ-ENCODING-SKIPLIST"><a href="#OBJ-ENCODING-SKIPLIST" class="headerlink" title="OBJ_ENCODING_SKIPLIST"></a>OBJ_ENCODING_SKIPLIST</h4><p>zset类型的数据使用SKIPLIST编码方式，底层为zset.h中的zset数据结构，在createZsetObject函数中在创建zset的同时还需要创建一个dict和zskiplist数据结构并将它们的指针赋给zset的成员变量</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function">robj *<span class="title">createZsetObject</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">    zset *zs = zmalloc(<span class="keyword">sizeof</span>(*zs));</span><br><span class="line">    robj *o;</span><br><span class="line"></span><br><span class="line">    zs-&gt;dict = dictCreate(&amp;zsetDictType,<span class="literal">NULL</span>);</span><br><span class="line">    zs-&gt;zsl = zslCreate();</span><br><span class="line">    o = createObject(OBJ_ZSET,zs);</span><br><span class="line">    o-&gt;encoding = OBJ_ENCODING_SKIPLIST;</span><br><span class="line">    <span class="keyword">return</span> o;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="底层数据结构"><a href="#底层数据结构" class="headerlink" title="底层数据结构"></a>底层数据结构</h3>]]></content>
+<h3 id="底层数据结构"><a href="#底层数据结构" class="headerlink" title="底层数据结构"></a>底层数据结构</h3><p>上面说到的数据编码方式使用的对应数据结构都是Redis实际存储值的地方，现在就来看看Redis是怎么实现这些数据结构的</p>
+]]></content>
       <categories>
         <category>Redis</category>
       </categories>
