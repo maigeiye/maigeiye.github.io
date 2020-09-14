@@ -238,4 +238,34 @@
         <category>Java</category>
       </categories>
   </entry>
+  <entry>
+    <title>Redis是如何存储数据的</title>
+    <url>/2020/07/05/Redis-DataStructure/</url>
+    <content><![CDATA[<p>了解Redis的朋友都知道，Redis数据库是以键值对的形式存储所有数据的，Redis还能通过自身支持的五种数据类型来更自由地存储数据，只需要用对应的命令就能把数据以这五种数据类型的形式来存进Redis数据库，但是Redis里的具体实现并没有看起来这么简单，这篇文章就自顶向下地来讲讲Redis的数据存储模型</p>
+<h2 id="Redis存储结构"><a href="#Redis存储结构" class="headerlink" title="Redis存储结构"></a>Redis存储结构</h2><p>Redis数据库中键值对是以下图的方式存储在Redis服务器的，具体每个结构在下面会逐一分析</p>
+<p><img src="/source/images/redis-storage-structure.jpg" alt="redis-storage-structure.jpg"></p>
+<a id="more"></a>
+
+<h3 id="redisServer"><a href="#redisServer" class="headerlink" title="redisServer"></a>redisServer</h3><p>Redis会在main函数中初始化一个redisServer作为Redis服务器的实体，db数组的每一项都是redisDb结构，即Redis数据库，Redis默认是有16个数据库的</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// server.h</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">redisServer</span> &#123;</span></span><br><span class="line">    ...</span><br><span class="line">    redisDb *db;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">int</span> dbnum;                      <span class="comment">/* Total number of configured DBs */</span></span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="redisDb"><a href="#redisDb" class="headerlink" title="redisDb"></a>redisDb</h3><p>redisDb就是Redis的具体某个数据库，可以用SELECT命令切换当前使用的数据库，redisDb内部有两个dict结构的指针，dict用于存储数据，expires用于存储过期数据</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// server.h</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">redisDb</span> &#123;</span></span><br><span class="line">    dict *dict;                 <span class="comment">/* The keyspace for this DB */</span></span><br><span class="line">    dict *expires;              <span class="comment">/* Timeout of keys with a timeout set */</span></span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">int</span> id;                     <span class="comment">/* Database ID */</span></span><br><span class="line">    ...</span><br><span class="line">&#125; redisDb;</span><br></pre></td></tr></table></figure>
+
+<h3 id="dict"><a href="#dict" class="headerlink" title="dict"></a>dict</h3><p>dict内部包含ht数组，存储两个dictht结构，即两个哈希表，两个表是为了让Redis进行扩容</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// dict.h</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">dict</span> &#123;</span></span><br><span class="line">    dictType *type;</span><br><span class="line">    <span class="keyword">void</span> *privdata;</span><br><span class="line">    dictht ht[<span class="number">2</span>];</span><br><span class="line">    <span class="keyword">long</span> rehashidx; <span class="comment">/* rehashing not in progress if rehashidx == -1 */</span></span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">long</span> iterators; <span class="comment">/* number of iterators currently running */</span></span><br><span class="line">&#125; dict;</span><br></pre></td></tr></table></figure>
+
+<h3 id="dictht"><a href="#dictht" class="headerlink" title="dictht"></a>dictht</h3><p>dictht内部包含哈希表结构，为一个dictEntry数组，使用链地址法解决哈希冲突，还有表的容量等信息</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// dict.h</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">dictht</span> &#123;</span></span><br><span class="line">    dictEntry **table;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="built_in">size</span>;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">long</span> sizemask;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">long</span> used;</span><br><span class="line">&#125; dictht;</span><br></pre></td></tr></table></figure>
+
+<h3 id="dictEntry"><a href="#dictEntry" class="headerlink" title="dictEntry"></a>dictEntry</h3><p>dictEntry是哈希表的节点，我们存储的每一个键值对都是存储在对应的dictEntry结构中的，dictEntry内部包含了key和value的指针，key的指针指向存储字符串的SDS结构，value的指针指向存储数据的redisObject，还有一个next指针指向另一个dictEntry，当发生哈希冲突时，可以通过这个指针将冲突的节点构成一条链表解决冲突</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// dict.h</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">dictEntry</span> &#123;</span></span><br><span class="line">    <span class="keyword">void</span> *key;</span><br><span class="line">    <span class="keyword">union</span> &#123;</span><br><span class="line">        <span class="keyword">void</span> *val;</span><br><span class="line">        <span class="keyword">uint64_t</span> u64;</span><br><span class="line">        <span class="keyword">int64_t</span> s64;</span><br><span class="line">        <span class="keyword">double</span> d;</span><br><span class="line">    &#125; v;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">dictEntry</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125; dictEntry;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Redis数据类型"><a href="#Redis数据类型" class="headerlink" title="Redis数据类型"></a>Redis数据类型</h2>]]></content>
+      <categories>
+        <category>Redis</category>
+      </categories>
+  </entry>
 </search>
