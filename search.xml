@@ -243,7 +243,7 @@
     <url>/2020/07/05/Redis-DataStructure/</url>
     <content><![CDATA[<p>了解Redis的朋友都知道，Redis数据库是以键值对的形式存储所有数据的，Redis还能通过自身支持的五种数据类型来更自由地存储数据，只需要用对应的命令就能把数据以这五种数据类型的形式来存进Redis数据库，但是Redis里的具体实现并没有看起来这么简单，这篇文章就自顶向下地来讲讲Redis的数据存储模型</p>
 <h2 id="Redis存储结构"><a href="#Redis存储结构" class="headerlink" title="Redis存储结构"></a>Redis存储结构</h2><p>Redis数据库中键值对是以下图的方式存储在Redis服务器的，具体每个结构在下面会逐一分析</p>
-<p><img src="/source/images/redis-storage-structure.jpg" alt="redis-storage-structure.jpg"></p>
+<p><img src="/images/redis-storage-structure.jpg" alt="redis-storage-structure.jpg"></p>
 <a id="more"></a>
 
 <h3 id="redisServer"><a href="#redisServer" class="headerlink" title="redisServer"></a>redisServer</h3><p>Redis会在main函数中初始化一个redisServer作为Redis服务器的实体，db数组的每一项都是redisDb结构，即Redis数据库，Redis默认是有16个数据库的</p>
