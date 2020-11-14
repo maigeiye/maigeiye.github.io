@@ -36,7 +36,7 @@
   <div id="app">
     <main class="content on">
       <section class="outer">
-  <article id="post-Redis-DataStructure" class="article article-type-post" itemscope
+  <article id="post-redis-datastructure" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -53,7 +53,7 @@
 
     
     <div class="article-meta">
-      <a href="/2020/09/15/Redis-DataStructure/" class="article-date">
+      <a href="/2020/09/15/redis-datastructure/" class="article-date">
   <time datetime="2020-09-15T13:13:35.000Z" itemprop="datePublished">2020-09-15</time>
 </a>
       
@@ -110,7 +110,7 @@
 <h3 id="redisServer"><a href="#redisServer" class="headerlink" title="redisServer"></a>redisServer</h3><p>Redis启动时会在main函数中初始化一个redisServer作为Redis服务器的实体，db数组的每一项都是redisDb结构，即Redis数据库，Redis默认是有16个数据库的</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// server.h</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">redisServer</span> &#123;</span></span><br><span class="line">    ...</span><br><span class="line">    redisDb *db;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">int</span> dbnum;                      <span class="comment">/* Total number of configured DBs */</span></span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="redisDb"><a href="#redisDb" class="headerlink" title="redisDb"></a>redisDb</h3><p>redisDb就是Redis的具体某个数据库，可以用SELECT命令切换当前使用的数据库，redisDb内部有两个dict结构的指针，dict用于存储数据，expires用于存储过期数据</p>
+<h3 id="redisDb"><a href="#redisDb" class="headerlink" title="redisDb"></a>redisDb</h3><p>redisDb就是Redis的具体某个数据库，可以用SELECT命令切换当前使用的数据库，redisDb内部有两个dict结构的指针，dict用于存储所有的数据（包括有以及没有超时属性的数据），expires只存储具有超时属性的数据</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// server.h</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">redisDb</span> &#123;</span></span><br><span class="line">    dict *dict;                 <span class="comment">/* The keyspace for this DB */</span></span><br><span class="line">    dict *expires;              <span class="comment">/* Timeout of keys with a timeout set */</span></span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">int</span> id;                     <span class="comment">/* Database ID */</span></span><br><span class="line">    ...</span><br><span class="line">&#125; redisDb;</span><br></pre></td></tr></table></figure>
 
 <h3 id="dict"><a href="#dict" class="headerlink" title="dict"></a>dict</h3><p>dict内部包含ht数组，存储两个dictht结构，即两个哈希表，ht[0]用于存储数据，ht[1]用于rehash，rehashidx值是用来记录扩容进度的，如果为-1则表示当前没有进行扩容，type属性为dictType结构体，里面包含计算哈希值等几个函数，所以一个Redis数据库的数据存储结构其实就是Redis实现的哈希表</p>
@@ -306,7 +306,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2020/09/15/Redis-DataStructure/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2020/09/15/redis-datastructure/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -323,7 +323,7 @@
   <nav class="article-nav">
     
     
-      <a href="/2020/06/21/IOC-achieve/" class="article-nav-link">
+      <a href="/2020/06/21/ioc-achieve/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
         <div class="article-nav-title">三步实现简易的IOC</div>
       </a>
@@ -389,6 +389,32 @@
 
   
   
+<div class="gitalk" id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.css">
+
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+
+<script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: '8fe1ed2e3e2cb2dcf51d',
+    clientSecret: 'd0924819f8ad368b9fcdf36b42b7ae5966ef4d81',
+    repo: 'BlogComment',
+    owner: 'maigeiye',
+    admin: ['maigeiye'],
+    // id: location.pathname,      // Ensure uniqueness and length less than 50
+    id: md5(location.pathname),
+    distractionFreeMode: false,  // Facebook-like distraction free mode
+    pagerDirection: 'last'
+  })
+
+  gitalk.render('gitalk-container')
+</script>
+
   
   
   
